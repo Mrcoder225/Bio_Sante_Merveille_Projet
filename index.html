@@ -10,7 +10,7 @@
 	<title>Bio Sante Merveille</title>
 
 	<!-- favicon -->
-	<link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
+	<link rel="shortcut icon" type="assets/img/products/image/png" href="assets/img/favicon.jpg">
 	<!-- google font -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
@@ -35,11 +35,11 @@
 <body>
 	
 	<!--PreLoader-->
-    <div class="loader">
+    <!-- <div class="loader">
         <div class="loader-inner">
             <div class="circle"></div>
         </div>
-    </div>
+    </div> -->
     <!--PreLoader Ends-->
 	
 	<!-- header -->
@@ -62,7 +62,7 @@
 								<li class="current-list-item"><a href="index.html">Accueil</a>
 								</li>
 								<li><a href="about.html">A propos De Nous</a></li>
-								<li><a href="#">Témoignages</a>
+								<li><a href="temoignage.html">Témoignages</a>
 								</li>
 								<li><a href="shop.html">Commandez</a>
 						
@@ -110,6 +110,132 @@
 		</div>
 	</div>
 	<!-- end hero area -->
+
+<div class="container">
+
+	<div class="row py-5">
+		<div class="col-lg-6 col-md-6 col-sm-12 py-4 bloc-galery ">
+			<input type="radio" id="image1" name="image" checked>
+			<input type="radio" id="image2" name="image">
+			<input type="radio" id="image3" name="image">
+
+			<div class="container-carousel">
+				<div class="featured-wrapper">
+					<ul class="featured-list">
+						<li>
+							<figure>
+								<img class="imgGalery" src="assets/img/products/imag1.jpg" alt="">
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img class="imgGalery" src="assets/img/products/image2.jpg" alt="">
+							</figure>
+						</li>
+						<li>
+							<figure>
+								<img class="imgGalery" src="assets/img/products/image3.jpg" alt="">
+							</figure>
+						</li>
+					</ul>
+					<ul class="arrows">
+						<li>
+							<label for="image1"></label>
+						</li>
+						<li>
+							<label for="image2"></label>
+						</li>
+						<li>
+							<label for="image3"></label>
+						</li>
+					</ul>
+					<ul class="dots">
+						<li>
+							<label for="image1"></label>
+						</li>
+						<li>
+							<label for="image2"></label>
+						</li>
+						<li>
+							<label for="image3"></label>
+						</li>
+					</ul>
+				</div>
+				<ul class="thumb-list">
+					<li>
+						<label for="image1">
+							<img class="imgGalery" src="assets/img/products/imag1.jpg" alt="">
+							<span class="outer">
+								<span class="inner">Caption1</span>
+							</span>
+						</label>
+					</li>
+					<li>
+						<label for="image2">
+							<img  src="assets/img/products/image2.jpg" alt="">
+							<span class="outer">
+								<span class="inner">Caption2</span>
+							</span>
+						</label>
+					</li>
+					<li>
+						<label for="image3">
+							<img  src="assets/img/products/image3.jpg" alt="">
+							<span class="outer">
+								<span class="inner">Caption3</span>
+							</span>
+						</label>
+					</li>
+				</ul>
+				<button type="button" class="btn btn-success btn-block" data-toggle="modal" data-target="#exampleModalCenter">Commandez le votre maintenant</button>
+                         
+				<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+	  <div class="modal-content">
+	    <div class="modal-header">
+		<h4 class="modal-title text-center" id="exampleModalLongTitle"> <strong>Entrez vos informations puis validez!!!</strong>  <br> 1 KIT à 32.000 FCFA</h4>
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		  <span aria-hidden="true">&times;</span>
+		</button>
+	    </div>
+	    <div class="modal-body">
+		<div class="contact-form">
+			<form type="POST" id="fruitkha-contact" onSubmit="return valid_datas( this );">
+			
+					<input type="text" placeholder="Nom & Prénoms" name="name&prenom" id="name&prenom">
+					<input type="email" placeholder="Email" name="email" id="email">
+				
+					<input type="tel" placeholder="Téléphone" name="phone" id="phone">
+					<input type="text" placeholder="Nombre de kits" name="number" id="number">
+					<input type="text" placeholder="Adresse de livraison (Ville/Quartier)" name="subject" id="subject">
+				
+				<input type="submit" value="Je valide ma commande">
+			</form>
+		</div>
+		<p class="text-center">Informations 100% confidentielles & Sécurisées🔐</p>
+	    </div>
+	    
+	  </div>
+	</div>
+    </div>
+
+			</div>
+
+
+		</div>
+
+		<div class="col-lg-6 col-md-6 col-sm-12">
+
+		</div>
+
+	</div>
+
+</div>
+
+
+
+
 
 	<!-- features list section -->
 	<div class="list-section pt-80 pb-80">
@@ -248,6 +374,32 @@
 	<script src="assets/js/sticker.js"></script>
 	<!-- main js -->
 	<script src="assets/js/main.js"></script>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick.min.js"></script>
+	<script>
+	    $(document).ready(function() {
+		  $('.product-slider-desktop').slick({
+			arrows: true,
+			dots: true,
+			infinite: true,
+			speed: 500,
+			fade: true,
+			cssEase: 'linear',
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			sync: {
+			    element: '.thumbnails ul',
+			    method: 'sync'
+			}
+		  });
+  
+		  $('.thumbnails ul').on('click', 'li', function(e) {
+                var slideIndex = $(this).data('slick-index');
+                $('.product-slider-desktop').slick('slickGoTo', slideIndex);
+            });
+        });
+    </script>
 
 </body>
 </html>

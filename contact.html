@@ -279,12 +279,21 @@
 				name: '',
 				email: '',
 				phone: '',
-				message: ''
+				subject: '',
+				message: '',
 			},
 			computed: {},
 			methods:{
 				sendContactData(){
-					if(this.name == ''){
+					if(this.name == '', this.email == '', this.phone == '', this.subject == ''){
+						Swal.fire({
+							icon: 'error',
+							title: 'Erreur',
+							text: "veuillez remplir tous les champs !!! ",
+							showConfirmButton: false,
+							timer: 2000,
+						})
+					}else if(this.name == ''){
 						Swal.fire({
 							icon: 'error',
 							title: 'Erreur',
@@ -300,22 +309,37 @@
 							showConfirmButton: false,
 							timer: 2000,
 						})
-					}else if(this.phone == ''){
+					}else if(!/^(01|05|07)(?:,| )?\d{8}$/.test(this.phone)){
 						Swal.fire({
 							icon: 'error',
 							title: 'Erreur',
-							text: "veuillez saisir un email valide !!! ",
+							text: "veuillez saisir un numéro de téléphone à 10 chiffres valide !!! ",
 							showConfirmButton: false,
 							timer: 2000,
 						})
 					}else{
+						axios.post('http://127.0.0.1:8000/emails/',{
+							"name": this.name,
+							"email": this.email,
+							"phone": this.phone,
+							"subject": this.subject,
+							"message": this.message
+						}).then(function(response){
+							console.log(response)
+						});
 						Swal.fire({
 							icon: 'success',
-							title: 'Erreur',
+							title: 'Message Envoyé',
 							text: "Merci de nous avoir contactez !!! ",
 							showConfirmButton: false,
 							timer: 2000,
-						})
+						});
+
+							this.name = "";
+							this.email = "";
+							his.phone = "";
+							this.subject = "";
+							this.message = "";
 					}
 				}
 			},

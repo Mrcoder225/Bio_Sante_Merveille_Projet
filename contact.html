@@ -309,7 +309,7 @@
 							showConfirmButton: false,
 							timer: 2000,
 						})
-					}else if(!/^(01|05|07)(?:,| )?\d{8}$/.test(this.phone)){
+					}else if(!/^(01|05|07)(?:,| )?.*$/.test(this.phone)){
 						Swal.fire({
 							icon: 'error',
 							title: 'Erreur',
@@ -318,7 +318,7 @@
 							timer: 2000,
 						})
 					}else{
-						axios.post('http://127.0.0.1:8000/emails/',{
+						axios.post('http://127.0.0.1:8000/api/emails/',{
 							"name": this.name,
 							"email": this.email,
 							"phone": this.phone,
@@ -335,11 +335,11 @@
 							timer: 2000,
 						});
 
-							this.name = "";
-							this.email = "";
-							his.phone = "";
-							this.subject = "";
-							this.message = "";
+						this.name = "";
+						this.email = "";
+						this.phone = "";
+						this.subject = "";
+						this.message = "";
 					}
 				}
 			},

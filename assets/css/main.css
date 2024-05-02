@@ -1684,6 +1684,7 @@ span.comment-date {
 .time-counter {
   position: relative;
   margin-bottom: 25px;
+  margin: 0 auto;
 }
 .time-counter .time-countdown {
   position: relative;
@@ -2066,6 +2067,20 @@ input[type=radio] {
 .contact-form form input[type=submit] {
   margin: 15px 0px;
   width: 100%;
+}
+
+.description-produit {
+  background-color: #b3fcdb;
+}
+
+.link {
+  text-decoration: underline;
+  color: #3c8ee5;
+}
+
+.time-false {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .video {

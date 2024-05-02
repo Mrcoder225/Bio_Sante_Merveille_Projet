@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,16 +33,17 @@
 	<link rel="stylesheet" href="assets/css/responsive.css">
 
 </head>
+
 <body>
-	
+
 	<!--PreLoader-->
-    <!-- <div class="loader">
+	<!-- <div class="loader">
         <div class="loader-inner">
             <div class="circle"></div>
         </div>
     </div> -->
-    <!--PreLoader Ends-->
-	
+	<!--PreLoader Ends-->
+
 	<!-- header -->
 	<div class="top-header-area" id="sticker">
 		<div class="container">
@@ -65,16 +67,18 @@
 								<li><a href="temoignage.html">Témoignages</a>
 								</li>
 								<li><a href="shop.html">Commandez</a>
-						
+
 								</li>
 								<li><a href="contact.html">Contactez Nous</a></li>
 								<li>
 									<div class="social-icons">
 										<ul>
-											<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-											<li><a href="#" target="_blank"><i class="fab fa-youtube"></i></a></li>
-					
-											
+											<li><a href="#" target="_blank"><i
+														class="fab fa-facebook-f"></i></a>
+											</li>
+											<li><a href="#" target="_blank"><i
+														class="fab fa-youtube"></i></a></li>
+
 										</ul>
 									</div>
 								</li>
@@ -89,7 +93,7 @@
 		</div>
 	</div>
 	<!-- end header -->
-	
+
 	<!-- hero area -->
 	<div class="hero-area hero-bg">
 		<div class="container">
@@ -111,56 +115,133 @@
 	</div>
 	<!-- end hero area -->
 
-<div class="container">
+	<div class="container">
 
-	<div class="row py-5">
-		<div class="col-lg-6 col-md-6 col-sm-12 py-4 bloc-galery ">
-			<input type="radio" id="image1" name="image" checked>
-			<input type="radio" id="image2" name="image">
-			<input type="radio" id="image3" name="image">
+		<div class="row py-5">
+			<div class="col-lg-6 col-md-6 col-sm-12 py-4 bloc-galery ">
+				<input type="radio" id="image1" name="image" checked>
+				<input type="radio" id="image2" name="image">
+				<input type="radio" id="image3" name="image">
 
-			<div class="container-carousel">
-				<div class="featured-wrapper">
-					<ul class="featured-list">
+				<div class="container-carousel">
+					<div class="featured-wrapper">
+						<ul class="featured-list">
+							<li>
+								<figure>
+									<img class="imgGalery" src="assets/img/products/imag1.jpg" alt="">
+								</figure>
+							</li>
+							<li>
+								<figure>
+									<img class="imgGalery" src="assets/img/products/image2.jpg"
+										alt="">
+								</figure>
+							</li>
+							<li>
+								<figure>
+									<img class="imgGalery" src="assets/img/products/image3.jpg"
+										alt="">
+								</figure>
+							</li>
+						</ul>
+						<ul class="arrows">
+							<li>
+								<label for="image1"></label>
+							</li>
+							<li>
+								<label for="image2"></label>
+							</li>
+							<li>
+								<label for="image3"></label>
+							</li>
+						</ul>
+						<ul class="dots">
+							<li>
+								<label for="image1"></label>
+							</li>
+							<li>
+								<label for="image2"></label>
+							</li>
+							<li>
+								<label for="image3"></label>
+							</li>
+						</ul>
+					</div>
+					<ul class="thumb-list">
 						<li>
-							<figure>
+							<label for="image1">
 								<img class="imgGalery" src="assets/img/products/imag1.jpg" alt="">
-							</figure>
+								<span class="outer">
+									<span class="inner">Caption1</span>
+								</span>
+							</label>
 						</li>
 						<li>
-							<figure>
-								<img class="imgGalery" src="assets/img/products/image2.jpg" alt="">
-							</figure>
+							<label for="image2">
+								<img src="assets/img/products/image2.jpg" alt="">
+								<span class="outer">
+									<span class="inner">Caption2</span>
+								</span>
+							</label>
 						</li>
 						<li>
-							<figure>
-								<img class="imgGalery" src="assets/img/products/image3.jpg" alt="">
-							</figure>
+							<label for="image3">
+								<img src="assets/img/products/image3.jpg" alt="">
+								<span class="outer">
+									<span class="inner">Caption3</span>
+								</span>
+							</label>
 						</li>
 					</ul>
-					<ul class="arrows">
-						<li>
-							<label for="image1"></label>
-						</li>
-						<li>
-							<label for="image2"></label>
-						</li>
-						<li>
-							<label for="image3"></label>
-						</li>
-					</ul>
-					<ul class="dots">
-						<li>
-							<label for="image1"></label>
-						</li>
-						<li>
-							<label for="image2"></label>
-						</li>
-						<li>
-							<label for="image3"></label>
-						</li>
-					</ul>
+					<button type="button" class="btn btn-success btn-block" data-toggle="modal"
+						data-target="#exampleModalCenter">Commandez le votre maintenant</button>
+
+					<!-- Modal -->
+					<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+						aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-centered" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h4 class="modal-title text-center" id="exampleModalLongTitle">
+										<strong>Entrez vos informations puis validez!!!</strong>
+										<br> 1 KIT à 32.000 FCFA</h4>
+									<button type="button" class="close" data-dismiss="modal"
+										aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<div class="contact-form">
+										<form type="POST" id="fruitkha-contact"
+											onSubmit="return valid_datas( this );">
+
+											<input type="text" placeholder="Nom & Prénoms"
+												name="name&prenom" id="name&prenom">
+											<input type="email" placeholder="Email" name="email"
+												id="email">
+
+											<input type="tel" placeholder="Téléphone" name="phone"
+												id="phone">
+											<input type="text" placeholder="Nombre de kits"
+												name="number" id="number">
+											<input type="text"
+												placeholder="Adresse de livraison (Ville/Quartier)"
+												name="subject" id="subject">
+
+											<input type="submit" value="Je valide ma commande">
+										</form>
+									</div>
+									<p class="text-center">Informations 100% confidentielles &
+										Sécurisées🔐
+									</p>
+								</div>
+
+							</div>
+						</div>
+					</div>
+
 				</div>
+<<<<<<< Updated upstream
 				<ul class="thumb-list">
 					<li>
 						<label for="image1">
@@ -219,23 +300,60 @@
 	  </div>
 	</div>
     </div>
+=======
+>>>>>>> Stashed changes
 
 			</div>
 
+			<div class="col-lg-6 col-md-6 col-sm-12">
+				<!--Content Column-->
+				<div class="container description-produit py-4">
+					<h2><span class="orange-text">Profitez</span> de ce mois <img src="assets/img/avaters/emo-joie.png" width="50px" alt="" srcset=""></h2>
+					<h4>Le NATUREL, votre puissante Tisane Africaine</h4>
+					<div class="text">
+						<p class="py-2">
+							Découvrez Le Naturel, la tisane africaine aux vertus extraordinaires,
+							également
+							connue sous le nom de "produit miracle". Avec sa formule puissante, Le Naturel
+							est votre allié dans le traitement efficace de plusieurs maladies, notamment :
+							<strong>Problèmes de prostate, Incontinence urinaire, Gouttes retardataires, Envies fréquentes d'uriner, Infections urinaires fréquentes,
+								Cancers du sein, VIH/SIDA, Diabète, Problèmes de glycémie, Problèmes de tension, Paralysies suite à un AVC, Prévention des AVC,
+								Brûlures des plantes des pieds, Kystes, fibromes, myomes
+							</strong>
+							, <a class="link" href="shop.html">(Voir tous les cas traités par le
+								Naturel...)</a> <br>
+							Donnez à votre corps le traitement naturel dont il a besoin avec Le Naturel.
+							Essayez-le dès aujourd'hui pour une santé optimale et un bien-être durable.
+						</p>
+					</div>
+					<!--Countdown Timer-->
+					<div class="time-counter time-false">
+						<div class="time-countdown clearfix" data-countdown="2020/2/01">
+							<div class="counter-column">
+								<div class="inner"><span class="count">00</span>Days</div>
+							</div>
+							<div class="counter-column">
+								<div class="inner"><span class="count">00</span>Hours</div>
+							</div>
+							<div class="counter-column">
+								<div class="inner"><span class="count">00</span>Mins</div>
+							</div>
+							<div class="counter-column">
+								<div class="inner"><span class="count">00</span>Secs</div>
+							</div>
+						</div>
+					</div>
+					<a href="cart.html" class="cart-btn mt-3">
+						<i class="fas fa-shopping-cart"></i>
+						Add to Cart
+					</a>
+				</div>
 
-		</div>
-
-		<div class="col-lg-6 col-md-6 col-sm-12">
+			</div>
 
 		</div>
 
 	</div>
-
-</div>
-
-
-
-
 
 	<!-- features list section -->
 	<div class="list-section pt-80 pb-80">
@@ -281,8 +399,6 @@
 	</div>
 	<!-- end features list section -->
 
-	
-
 	<!-- footer -->
 	<div class="footer-area">
 		<div class="container">
@@ -290,7 +406,8 @@
 				<div class="col-lg-3 col-md-6">
 					<div class="footer-box about-widget">
 						<h2 class="widget-title">Bio Sante Merveille</h2>
-						<p>Ut eninm ad minngim veniam perspjiciatis unde omnis iste natus er doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
+						<p>Ut eninm ad minngim veniam perspjiciatis unde omnis iste natus er doloremque
+							laudantium, totam rem aperiam, eaque ipsa quae.</p>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6">
@@ -312,7 +429,7 @@
 							<li><a href="#">Témoignages </a></li>
 							<li><a href="#">Commandez votre Tisane</a></li>
 							<li><a href="#">Contactez Nous</a></li>
-			
+
 						</ul>
 					</div>
 				</div>
@@ -323,14 +440,14 @@
 							<li><a href="#">Conditions d'utilisation</a></li>
 							<li><a href="#">Politique de confidentialité </a></li>
 						</ul>
-						
+
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- end footer -->
-	
+
 	<!-- copyright -->
 	<div class="copyright">
 		<div class="container">
@@ -345,7 +462,7 @@
 						<ul>
 							<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
 							<li><a href="#" target="_blank"><i class="fab fa-youtube"></i></a></li>
-				
+
 						</ul>
 					</div>
 				</div>
@@ -353,7 +470,7 @@
 		</div>
 	</div>
 	<!-- end copyright -->
-	
+
 	<!-- jquery -->
 	<script src="assets/js/jquery-1.11.3.min.js"></script>
 	<!-- bootstrap -->
@@ -377,6 +494,7 @@
 
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick.min.js"></script>
+<<<<<<< Updated upstream
 	
 	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -405,6 +523,30 @@
             });
         });
     </script>
+=======
+	<script>
+		$(document).ready(function() {
+			$('.product-slider-desktop').slick({
+				arrows: true,
+				dots: true,
+				infinite: true,
+				speed: 500,
+				fade: true,
+				cssEase: 'linear',
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				sync: {
+					element: '.thumbnails ul',
+					method: 'sync'
+				}
+			});
+			$('.thumbnails ul').on('click', 'li', function(e) {
+				var slideIndex = $(this).data('slick-index');
+				$('.product-slider-desktop').slick('slickGoTo', slideIndex);
+			});
+		});
+	</script>
+>>>>>>> Stashed changes
 
 	<script>
 		var app1 = new Vue({
@@ -494,4 +636,5 @@
 	</script>
 
 </body>
+
 </html>

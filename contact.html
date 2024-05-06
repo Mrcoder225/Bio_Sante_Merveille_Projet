@@ -125,7 +125,7 @@
 												<input type="text" placeholder="Objet" name="subject" id="subject" v-model="subject">
 											</p>
                                           	<p>
-												<textarea name="message" id="message" cols="30" rows="10" placeholder="Message" v-model="Message"></textarea>
+												<textarea name="message" id="message" cols="30" rows="10" placeholder="Message" v-model="message"></textarea>
 											</p>
                                           	<p>
 												<input type="submit" value="Envoyer le message" @click.prevent="sendContactData()">
@@ -318,7 +318,7 @@
 							timer: 2000,
 						})
 					}else{
-						axios.post('http://127.0.0.1:8000/api/emails/',{
+						axios.post('https://moro15.pythonanywhere.com/api/emails/',{
 							"name": this.name,
 							"email": this.email,
 							"phone": this.phone,

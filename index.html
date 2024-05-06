@@ -190,7 +190,7 @@
 						</li>
 					</ul>
 					<div class="bouton-position">
-						<a href="cart.html" class="cart-btn mt-3 justify-content-center" data-toggle="modal"
+						<a href="#" class="cart-btn mt-3 justify-content-center" data-toggle="modal"
 						data-target="#exampleModalCenter">
 						   <i class="fas fa-shopping-cart"></i>
 						    Commandez maintenant!
@@ -211,25 +211,22 @@
 										<span aria-hidden="true">&times;</span>
 									</button>
 								</div>
-								<div class="modal-body">
+								<div class="modal-body" id="commande">
 									<div class="contact-form">
-										<form type="POST" id="fruitkha-contact"
-											onSubmit="return valid_datas( this );">
+										<form type="POST" id="">
 
-											<input type="text" placeholder="Nom & Prénoms"
-												name="name&prenom" id="name&prenom">
-											<input type="email" placeholder="Email" name="email"
-												id="email">
+											<input type="text" placeholder="Nom & Prénoms" name="name&prenom" id="name&prenom" v-model="name">
+											<input type="email" placeholder="Email" name="email"id="email" v-model="email">
 
 											<input type="tel" placeholder="Téléphone" name="phone"
-												id="phone">
+												id="phone" v-model="phone">
 											<input type="text" placeholder="Nombre de kits"
-												name="number" id="number">
+												name="number" id="number" v-model="nbr_kit">
 											<input type="text"
 												placeholder="Adresse de livraison (Ville/Quartier)"
-												name="subject" id="subject">
+												name="subject" id="subject" v-model="adresse">
 
-											<input type="submit" value="Je valide ma commande">
+											<input type="submit" value="Je valide ma commande"  @click.prevent="sendCommandeData()">
 										</form>
 									</div>
 									<p class="text-center">Informations 100% confidentielles &
@@ -518,6 +515,9 @@
 
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 	<script>
 		$(document).ready(function() {
 			$('.product-slider-desktop').slick({

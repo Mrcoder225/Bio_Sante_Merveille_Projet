@@ -1684,6 +1684,7 @@ span.comment-date {
 .time-counter {
   position: relative;
   margin-bottom: 25px;
+  margin: 0 auto;
 }
 .time-counter .time-countdown {
   position: relative;
@@ -2066,6 +2067,56 @@ input[type=radio] {
 .contact-form form input[type=submit] {
   margin: 15px 0px;
   width: 100%;
+}
+
+.description-produit {
+  background-color: #b3fcdb;
+}
+
+.link {
+  text-decoration: underline;
+  color: #603f12;
+}
+
+.time-false {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image-title-cadre {
+  width: 100%;
+}
+
+.bouton-position {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bouton-position img {
+  width: 30px;
+}
+
+.tittre-cadre {
+  color: #7f1c38;
+  font-weight: bold;
+}
+
+.lien-page .clignote {
+  color: rgb(27, 128, 183);
+  animation: clignotte 1000ms infinite;
+}
+
+@keyframes clignotte {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.avis {
+  background-color: #f5f5f5;
 }
 
 .video {

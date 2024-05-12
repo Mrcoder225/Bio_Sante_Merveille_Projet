@@ -30,9 +30,55 @@
 	<link rel="stylesheet" href="assets/css/main.css">
 	<!-- responsive -->
 	<link rel="stylesheet" href="assets/css/responsive.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 <body>
+
+	<style>
+		html, body {
+			margin: 0;
+			padding: 0;
+		  }
+	.slick-prev:before,
+    .slick-next:before {
+      color: black;
+	  font-size: 50px;
+    }
+
+	.slick-slide {
+		margin: 20px 0px;
+	  }
+	
+	  * {
+		box-sizing: border-box;
+	  }
+  
+	  .slider {
+		  width: 50%;
+		  margin: 100px auto;
+	  }
+  
+	  .slick-slide {
+		margin: 0px 20px;
+	  }
+  
+	  .slick-slide img {
+		width: 100%;
+	  }
+  
+	  .slick-slide {
+		transition: all ease-in-out .3s;
+		opacity: .5;
+	  }
+	
+	  .slick-current {
+		opacity: 1;
+	  }
+	</style>
 	
 	<!--PreLoader-->
     <div class="loader">
@@ -111,7 +157,7 @@
 	<div class="container">
 
 		<div class="row py-5">
-			<div class="col-lg-6 col-md-6 col-sm-12 py-4 bloc-galery ">
+			<div class="col-lg-6 col-md-6 col-sm-12 py-4 bloc-galery">
 				<input type="radio" id="image1" name="image" checked>
 				<input type="radio" id="image2" name="image">
 				<input type="radio" id="image3" name="image">
@@ -192,7 +238,7 @@
 						   <i class="fas fa-shopping-cart"></i>
 						    Commandez maintenant!
 						 </a>
-					    </div>
+					</div>
 
 					<!-- Modal -->
 					<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
@@ -209,8 +255,8 @@
 									</button>
 								</div>
 								<div class="modal-body" id="commande">
-									<div class="contact-form">
-										<form type="POST" id="">
+									<div class="contact-form" id="commande1">
+										<form type="POST">
 
 											<input type="text" placeholder="Nom & Prénoms" name="name&prenom" id="name&prenom" v-model="name">
 											<input type="email" placeholder="Email" name="email"id="email" v-model="email">
@@ -223,7 +269,7 @@
 												placeholder="Adresse de livraison (Ville/Quartier)"
 												name="subject" id="subject" v-model="adresse">
 
-											<input type="submit" value="Je valide ma commande"  @click.prevent="sendCommandeData()">
+											<input type="submit" value="Je valide ma commande"  @click.prevent="sendCommande1Data()">
 										</form>
 									</div>
 									<p class="text-center">Informations 100% confidentielles &
@@ -238,9 +284,7 @@
 				</div>
 
 			</div>
-
-			<div class="col-lg-6 col-md-6 col-sm-12">
-				<!--Content Column-->
+			<div class="col-lg-6 col-md-6 col-sm-12 py-4 bloc-galery">
 				<div class="container description-produit py-4">
 					<h2><span class="orange-text">Profitez</span> de ce mois <img src="assets/img/avaters/emo-joie.png" width="50px" alt="" srcset=""></h2>
 					<h4>Le NATUREL, votre puissante Tisane Africaine</h4>
@@ -269,47 +313,90 @@
 						Commandez maintenant!
 					   </a>
 					</div>
-					
-					<div class="image-title-cadre py-4">
-						<h3 class="tittre-cadre">Rêvez vous prononcer la phrase  " je suis guéri de la prostate "</h3>
-						<img src="assets/img/prostate_image.gif" alt="image prostate" srcset="">
-						<h6>Ne vous inquitez plus la solution se trouve avec <strong>Le Naturel</strong></h6>
-						<h6> <a href="temoignage.html">Suivre des témoignages de personnes qui souffraient de la prostate.</a> </h6>
-
-					</div>
-					<div class="image-title-cadre py-4">
-						<h3 class="tittre-cadre">Vous souvrez du Diabète, la tisane miraculeuse est la pour vous</h3>
-						<img src="assets/img/diabete_image.gif" alt="image diabete" srcset="">
-						<h6>Ne vous inquitez plus la solution se trouve avec <strong>Le Naturel</strong></h6>
-						<h6> <a href="temoignage.html">Suivre des témoignages des personnes qui souffraient du diabète</a> </h6>
-					</div>
-					<div class="image-title-cadre py-4">
-						<h3 class="tittre-cadre">Traitez le cancer de seins en tout simplicité</h3>
-						<img src="assets/img/concer_seins.gif" alt="image cancer de seins" srcset="">
-						<h6>Ne vous inquiétez plus, la solution se trouve avec<strong>Le Naturel</strong></h6>
-						<h6> <a href="temoignage.html">Suivre les témoignages de ces femmes qui ont été guéri du cancer de seins</a> </h6>
-					</div>
-					<div class="image-title-cadre py-4">
-						<h3 class="tittre-cadre">Les hémorroïdes vous fatiguent ? Vous avez la solution avec le Naturel !</h3>
-						<img src="assets/img/hemoroide_image.gif" alt="image hemorroide" srcset="">
-						<h6>Ne vous inquiétez plus, la solution se trouve avec<strong>Le Naturel</strong></h6>
-						<h6> <a href="temoignage.html">Suivre les témoignages des personnes qui ont été guéri de hémorroïdes</a> </h6>
-					</div>
-					<div class="image-title-cadre py-4">
-						<h3 class="tittre-cadre">Guérissez votre ulcère avec le Naturel</h3>
-							<img src="assets/img/ulcere_image.png" alt="image ulcère" srcset="">
-						
-						<h6>Ne vous inquiétez plus, la solution se trouve avec<strong>Le Naturel</strong></h6>
-						<h6> <a href="temoignage.html">Suivre des temoignages des personnes qui ont été guerir du cancer de seins</a> </h6>
-					</div>
-					<div class="lien-page">
-						<h4 class="clignote"><a href="shop.html">Cliquez ici pour voir tous les cas de maladies que "<strong>le Naturel</strong>" traite >>></a></h4>
-						
-					</div>
 				</div>
-				<h4 class="my-4" >Témoignagesde certains clients guéris sur notre page youtube... </h4>
+			</div>
+		</div>
 
-				<div class="video my-5">
+		<div class="row py-5  my-slick-1">
+			<div class="col-md-4 mb-4">
+				<div class="card fa-card h-100"><img class="card-img-top w-100 h-50" src="assets/img/prostate_image.gif" alt="courses" />
+				  <div class="card-body">
+					<h3 class="tittre-cadre">Rêvez vous prononcer la phrase  " je suis guéri de la prostate "</h3>
+					<h6>Ne vous inquitez plus la solution se trouve avec <strong>Le Naturel</strong></h6>
+					<h6> <a href="temoignage.html">Suivre des témoignages de personnes qui souffraient de la prostate.</a> </h6>
+					<hr>
+					<div class="d-flex justify-content-between"> 
+					  <span class="fa-span"><i class="fa-solid fa-calendar-days text-primary fa-icon "></i> 1 Mai 2024</span> <a href="" class="text-primary fw-bold"> Voir + </a>
+					</div>
+				  </div>
+				</div>
+			</div>
+			<div class="col-md-4 mb-4">
+				<div class="card fa-card h-100"><img class="card-img-top w-100 h-50" src="assets/img/diabete_image.gif" alt="courses" />
+				  <div class="card-body">
+					<h3 class="tittre-cadre">Vous souvrez du Diabète, la tisane miraculeuse est la pour vous</h3>
+					<h6>Ne vous inquitez plus la solution se trouve avec <strong>Le Naturel</strong></h6>
+					<h6> <a href="temoignage.html">Suivre des témoignages de personnes qui souffraient de la prostate.</a> </h6>
+					<hr>
+					<div class="d-flex justify-content-between"> 
+					  <span class="fa-span"><i class="fa-solid fa-calendar-days text-primary fa-icon "></i> 1 Mai 2024</span> <a href="#" class="text-primary fw-bold"> Voir + </a>
+					</div>
+				  </div>
+				</div>
+			</div>
+			<div class="col-md-4 mb-4">
+				<div class="card fa-card h-100"><img class="card-img-top w-100 h-50" src="assets/img/concer_seins.gif" alt="courses" />
+				  <div class="card-body">
+					<h3 class="tittre-cadre">Traitez le cancer de seins en tout simplicité</h3>
+					<h6>Ne vous inquitez plus la solution se trouve avec <strong>Le Naturel</strong></h6>
+					<h6> <a href="temoignage.html">Suivre des témoignages de personnes qui souffraient de la prostate.</a> </h6>
+					<hr>
+					<div class="d-flex justify-content-between"> 
+					  <span class="fa-span"><i class="fa-solid fa-calendar-days text-primary fa-icon "></i> 1 Mai 2024</span> <a href="#" class="text-primary fw-bold"> Voir + </a>
+					</div>
+				  </div>
+				</div>
+			</div>
+			<div class="col-md-4 mb-4">
+				<div class="card fa-card h-100"><img class="card-img-top w-100 h-50" src="assets/img/hemoroide_image.gif" alt="image hemorroide" />
+				  <div class="card-body">
+					<h3 class="tittre-cadre">Traitez le cancer de seins en tout simplicité</h3>
+					<h6>Ne vous inquitez plus la solution se trouve avec <strong>Le Naturel</strong></h6>
+					<h6> <a href="temoignage.html">Suivre des témoignages de personnes qui souffraient de la prostate.</a> </h6>
+					<hr>
+					<div class="d-flex justify-content-between"> 
+					  <span class="fa-span"><i class="fa-solid fa-calendar-days text-primary fa-icon "></i> 1 Mai 2024</span> <a href="#" class="text-primary fw-bold"> Voir + </a>
+					</div>
+				  </div>
+				</div>
+			</div>
+			<div class="col-md-4 mb-4">
+				<div class="card fa-card h-100"><img class="card-img-top w-100 h-50" src="assets/img/ulcere_image.png"alt="image ulcère" />
+				  <div class="card-body">
+					<h3 class="tittre-cadre">Guérissez votre ulcère avec le Naturel</h3>
+					<h6>Ne vous inquitez plus la solution se trouve avec <strong>Le Naturel</strong></h6>
+					<h6> <a href="temoignage.html">Suivre des témoignages de personnes qui souffraient de la prostate.</a> </h6>
+					<hr>
+					<div class="d-flex justify-content-between"> 
+					  <span class="fa-span"><i class="fa-solid fa-calendar-days text-primary fa-icon "></i> 1 Mai 2024</span> <a href="#" class="text-primary fw-bold"> Voir + </a>
+					</div>
+				  </div>
+				</div>
+			</div>
+		</div>
+		<div class="lien-page">
+			<h4 class="clignote"><a href="shop.html">Cliquez ici pour voir tous les cas de maladies que "<strong>le Naturel</strong>" traite >>></a></h4>
+		</div>
+		
+		</div>
+		
+	<section class="bloc-galery" >	
+			
+			<h3 class="my-4 text-center pt-4" >Témoignagesde certains clients guéris sur notre page youtube... </h3>
+		<div class="container">
+			<div class="row py-5 ">
+
+				<div class="my-5 col-md-4 col-sm-6 col-xs-12">
 					<h5>Elle a été guéri du du diabète et du cancer du sein...</h5>
 					<div class="video-title">
 						<!-- <h5>Elle nous témoigne sur un cas de prostate...</h5> -->
@@ -317,64 +404,80 @@
 					</div>
 				</div>
 
-				<div class="video my-5">
-					<h5>Enfin elle a eu son bébé...</h5>
+				<div class="my-5 col-md-4 col-sm-6 col-xs-12">
+					<h5>Elles ont été guéries des fibromes et des kystes....</h5>
 					<div class="video-title">
 						<!-- <h5>Elle nous témoigne sur un cas de prostate...</h5> -->
-						<iframe src="https://www.youtube.com/embed/bSIMMEYIWGE?si=0dbDquNyGHH6OXMf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+						<iframe  src="https://www.youtube.com/embed/Oq2m78BDAx8?si=wpODaV-p1zKrkrnU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 					</div>
 				</div>
 
-				<div class="video my-5">
+				<div class="my-5 col-md-4 col-sm-6">
 					<h5>Aujourd'hui, il est guéri de l'hémorroïdes...</h5>
 					<div class="video-title">
 						<!-- <h5>Elle nous témoigne sur un cas de prostate...</h5> -->
 						<iframe src="https://www.youtube.com/embed/b000bmmxtRI?si=wqWRUbiJ6T-ZGESG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 					</div>
 				</div>
-				<div class="video my-4">
-					<div class="video">
-						<h5>Elle est guéri de l'ulcère...</h5>
-						<div class="video-title">
-							<!-- <h5>Elle nous témoigne sur un cas de prostate...</h5> -->
-							<iframe  src="https://www.youtube.com/embed/BmvzWRa1-9g?si=pQ7dsXFBZ4R3_8Oa"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-						</div>
+
+				<div class="my-5 col-md-4 col-sm-6 col-xs-12">
+					<h5>Elle est guéri de l'ulcère...</h5>
+					<div class="video-title">
+						<!-- <h5>Elle nous témoigne sur un cas de prostate...</h5> -->
+						<iframe  src="https://www.youtube.com/embed/BmvzWRa1-9g?si=pQ7dsXFBZ4R3_8Oa"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 					</div>
 				</div>
-				<div class="video my-4">
-					<div class="video">
-						<h5>Elles ont été guéries des fibromes et des kystes....</h5>
-						<div class="video-title">
-							<!-- <h5>Elle nous témoigne sur un cas de prostate...</h5> -->
-							<iframe  src="https://www.youtube.com/embed/Oq2m78BDAx8?si=wpODaV-p1zKrkrnU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-						</div>
+
+				<div class="my-5 col-md-4 col-sm-6 col-xs-12">
+					<h5>Enfin elle a eu son bébé...</h5>
+					<div class="video-title">
+						<!-- <h5>Elle nous témoigne sur un cas de prostate...</h5> -->
+						<iframe src="https://www.youtube.com/embed/bSIMMEYIWGE?si=0dbDquNyGHH6OXMf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 					</div>
 				</div>
-				<div class="lien-page">
-					<h4 class="clignote"><a href="temoignage.html">Cliquez ici pour plus de Témoignages!</a></h4>
+				
+				<div class="col-md-4 col-sm-6 col-xs-12 d-flex flex-column justify-content-center">
+					<div class="lien-page">
+						<h4 class="clignote"><a href="temoignage.html">Cliquez ici pour plus de Témoignages!</a></h4>
+					</div>
 				</div>
-				<h3 class="my-4">Quelques avis certains clients</h3>
-				<div class="avis py-4">
-					<img class="my-2" src="assets/img/avi1.png" alt="avi1" srcset="">
-					<img class="my-2" src="assets/img/avi2.png" alt="avi2" srcset="">
-					<img class="my-2" src="assets/img/avi3.png" alt="avi3" srcset="">
-					<img class="my-2" src="assets/img/avi4.png" alt="avi4" srcset="">
-					<img class="my-2" src="assets/img/avi5.png" alt="avi5" srcset="">
+			</div>
+		</div>
 
-				</div>
+	</section>
 
-                        <h3 class="my-4">Elle vous montre son cas avant et après l'échographie</h3>
-				<div class="avis py-4">
-					<img class="my-4" src="assets/img/whatsp1.jpg" alt="whatsp1" srcset="">
-					<img class="my-4" src="assets/img/whatsp2.jpg" alt="whatsp2" srcset="">
-					<img class="my-4" src="assets/img/whatsap3.jpg" alt="whatsap3" srcset="">
-				</div>
+	<section>
+		<h3 class="my-4 text-center">Quelques avis certains clients</h3>
+		<div class="container">
+			<div class="row avis py-4" style="background-color: rgb(255, 255, 255);">
+				<div class="h-50"><img class="my-2  w-100 h-50" src="assets/img/avi1.png" alt="avi1" srcset=""></div>
+				<div class="h-50"><img class="my-2  w-100 h-50" src="assets/img/avi2.png" alt="avi2" srcset=""></div>
+				<div class="h-50"><img class="my-2  w-100 h-50" src="assets/img/avi3.png" alt="avi3" srcset=""></div>
+				<div class="h-50"><img class="my-2  w-100 h-50" src="assets/img/avi4.png" alt="avi4" srcset=""></div>
+				<div class="h-50"><img class="my-2  w-100 h-50" src="assets/img/avi5.png" alt="avi5" srcset=""></div>
+			</div>
+		</div>	
+	</section>
+				
+	<section class="bloc-galery p-4">
+		<h3 class="my-4 text-center">Elle vous montre son cas avant et après l'échographie</h3>
+		<div class="container">
+			<div class="row py-4">
+				<div class="col-md-4 col-sm-6"><img class="my-4" src="assets/img/whatsp1.jpg" alt="whatsp1" srcset=""></div>
+				<div class="col-md-4 col-sm-6"><img class="my-4" src="assets/img/whatsp2.jpg" alt="whatsp2" srcset=""></div>
+				<div class="col-md-4 col-sm-6"><img class="my-4" src="assets/img/whatsap3.jpg" alt="whatsap3" srcset=""></div>
+			</div>
+		</div>
+	</section>
+                
+	<section>
+		<h3 class="my-4 p-4 text-center">Il souvrait de l'hypertension, mais aujourd'hui il nous remerci!</h3>
+		<div class="py-4 text-center h-50">
+			<img class="my-4 h-100" src="assets/img/whatsp4.jpg" alt="whatsp4" srcset="">
 
-				<h3 class="my-4">Il souvrait de l'hypertension, mais aujourd'hui il nous remerci!</h3>
-				<div class="avis py-4">
-					<img class="my-4" src="assets/img/whatsp4.jpg" alt="whatsp4" srcset="">
-
-				</div>
+		</div>
+	</section>
+				
 
 				<div class="bouton-position my-4">
 					<a href="cart.html" class="cart-btn mt-3 justify-content-center" data-toggle="modal"
@@ -383,7 +486,7 @@
 					    Commandez maintenant!
 					 </a>
 				    </div>
-			</div>
+				</div>
 
 		</div>
 
@@ -526,7 +629,158 @@
 	<script src="assets/js/sticker.js"></script>
 	<!-- main js -->
 	<script src="assets/js/main.js"></script>
-	
+	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="assets/js/slick.min.js"></script>
+
+	<script type="text/javascript">
+		$('.my-slick-1').slick({
+			dots: true,
+			centerMode: true,
+			centerPadding: '60px',
+			infinite: true,
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			speed: 300,
+				responsive: [
+				{
+				  breakpoint: 950,
+				  settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1,
+					centerPadding: '50px',
+					centerMode: true,
+					infinite: true,
+					prevArrow: false,
+					nextArrow: false,
+				  }
+				},
+				{
+				  breakpoint: 600,
+				  settings: {
+					centerMode: true,
+					autoplay: false,
+					infinite: true,
+					centerPadding: '50px',
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					prevArrow: false,
+					nextArrow: false,
+				  }
+				},
+			  ]
+		});
+
+		$('.avis').slick({
+			dots: true,
+			slidesToShow: 2,
+			autoplay: true,
+			infinite: true,
+			pauseOnHover: true,
+      		autoplayspeed: 2000,
+			responsive: [
+			  {
+				breakpoint: 950,
+				settings: {
+				  slidesToShow: 2,
+				  slidesToScroll: 1,
+				  centerPadding: '50px',
+				  centerMode: true,
+				  infinite: true,
+				  prevArrow: false,
+				  nextArrow: false,
+				}
+			  },
+			  {
+				breakpoint: 600,
+				settings: {
+				  centerMode: true,
+				  autoplay: false,
+				  infinite: true,
+				  centerPadding: '50px',
+				  slidesToShow: 1,
+				  slidesToScroll: 1,
+				  prevArrow: false,
+				  nextArrow: false,
+				}
+			  },
+			]
+		});
+	</script>
+
+	<script>
+		new Vue({
+			el: '#commande1',
+			data: {
+				name: '',
+				email: '',
+				phone: '',
+				nbr_kit: '',
+				adresse: '',
+			},
+			computed: {},
+			methods: {
+				sendCommande1Data(){
+					if(this.name == '', this.email == '', this.phone == '', this.nbr_kit == '', this.adresse == ''){
+						Swal.fire({
+							icon: 'error',
+							title: 'Erreur',
+							text: "veuillez remplir tous les champs !!! ",
+							showConfirmButton: false,
+							timer: 2000,
+						})
+					}else if(!/^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(this.email)){
+						Swal.fire({
+							icon: 'error',
+							title: 'Erreur',
+							text: "veuillez saisir un email valide !!! ",
+							showConfirmButton: false,
+							timer: 2000,
+						})
+					}else if(!/^(01|05|07)(?:,| )?.*$/.test(this.phone)){
+						Swal.fire({
+							icon: 'error',
+							title: 'Erreur',
+							text: "veuillez saisir un numéro de téléphone à 10 chiffres valide !!! ",
+							showConfirmButton: false,
+							timer: 2000,
+						})
+					}else if(this.nbr_kit == ''){
+						Swal.fire({
+							icon: 'error',
+							title: 'Erreur',
+							text: "veuillez saisir le nombre de kit !!! ",
+							showConfirmButton: false,
+							timer: 2000,
+						})
+					}else{
+						axios.post('https://moro15.pythonanywhere.com/api/commandes/',{
+							"name": this.name,
+							"email": this.email,
+							"phone": this.phone,
+							"nbr_kit": this.nbr_kit,
+							"adresse": this.adresse
+						}).then(function(response){
+							console.log(response)
+						});
+						Swal.fire({
+							icon: 'success',
+							title: 'Commande validée',
+							text: "Merci de nous faire confiance !!! ",
+							showConfirmButton: false,
+							timer: 2000,
+						});
+						
+					}
+				
+				}
+			}
+		})
+	</script>
+
 
 </body>
 </html>

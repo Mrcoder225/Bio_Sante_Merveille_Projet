@@ -19,6 +19,9 @@
 	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
 	<!-- fontawesome -->
 	<link rel="stylesheet" href="assets/css/all.min.css">
+	 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.2.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
 	<!-- bootstrap -->
 	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
 	<!-- owl carousel -->
@@ -37,11 +40,16 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css"/>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.2.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
 </head>
 <body>
 
 	<style>
+		html {
+  scroll-behavior: smooth;
+}
 		html, body {
 			margin: 0;
 			padding: 0;
@@ -80,6 +88,14 @@
 	
 	  .slick-current {
 		opacity: 1;
+	  }
+	  
+	  .fa-solid{
+		position: absolute;
+		right: 50%;
+		top: 85%;
+		font-size: 5rem;
+		color: #fff
 	  }
 	</style>
 	
@@ -148,241 +164,244 @@
 							<div class="hero-btns">
 								<a href="shop.html" class="boxed-btn">Commandez</a>
 								<a href="contact.html" class="bordered-btn">Contactez Nous</a>
+								<a href="#maladie"><i class="fa-solid fa-chevron-down clignote"></i></a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-	<!-- end hero area -->
-
-	<div class="container">
-
-		<div class="row py-5">
-			<div class="col-lg-6 col-md-6 col-sm-12 py-4 bloc-galery">
-				<input type="radio" id="image1" name="image" checked>
-				<input type="radio" id="image2" name="image">
-				<input type="radio" id="image3" name="image">
-
-				<div class="container-carousel">
-					<div class="featured-wrapper">
-						<ul class="featured-list">
-							<li>
-								<figure>
-									<img class="imgGalery" src="assets/img/products/image1.png" alt="">
-								</figure>
-							</li>
-							<li>
-								<figure>
-									<img class="imgGalery" src="assets/img/products/image2.png"
-										alt="">
-								</figure>
-							</li>
-							<li>
-								<figure>
-									<img class="imgGalery" src="assets/img/products/image3.png"
-										alt="">
-								</figure>
-							</li>
-						</ul>
-						<ul class="arrows">
-							<li>
-								<label for="image1"></label>
-							</li>
-							<li>
-								<label for="image2"></label>
-							</li>
-							<li>
-								<label for="image3"></label>
-							</li>
-						</ul>
-						<ul class="dots">
-							<li>
-								<label for="image1"></label>
-							</li>
-							<li>
-								<label for="image2"></label>
-							</li>
-							<li>
-								<label for="image3"></label>
-							</li>
-						</ul>
-					</div>
-					<ul class="thumb-list">
-						<li>
-							<label for="image1">
-								<img class="imgGalery" src="assets/img/products/image1.png" alt="">
-								<span class="outer">
-									<span class="inner">Caption1</span>
-								</span>
-							</label>
-						</li>
-						<li>
-							<label for="image2">
-								<img src="assets/img/products/image2.png" alt="">
-								<span class="outer">
-									<span class="inner">Caption2</span>
-								</span>
-							</label>
-						</li>
-						<li>
-							<label for="image3">
-								<img src="assets/img/products/image3.png" alt="">
-								<span class="outer">
-									<span class="inner">Caption3</span>
-								</span>
-							</label>
-						</li>
-					</ul>
-					<div class="bouton-position">
-						<a href="#" class="cart-btn mt-3 justify-content-center" data-toggle="modal"
-						data-target="#exampleModalCenter">
-						   <i class="fas fa-shopping-cart"></i>
-						    Commandez maintenant!
-						 </a>
-					</div>
-
-					<!-- Modal -->
-					<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-						aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-						<div class="modal-dialog modal-dialog-centered" role="document">
-							<div class="modal-content">
-								<div class="modal-header">
-									<h4 class="modal-title text-center" id="exampleModalLongTitle">
-										<strong>Entrez vos informations puis validez!!!</strong>
-										<br> 1 KIT à 32.000 FCFA</h4>
-									<button type="button" class="close" data-dismiss="modal"
-										aria-label="Close">
-										<span aria-hidden="true">&times;</span>
-									</button>
-								</div>
-								<div class="modal-body" id="commande">
-									<div class="contact-form" id="commande1">
-										<form type="POST">
-
-											<input type="text" placeholder="Nom & Prénoms" name="name&prenom" id="name&prenom" v-model="name">
-											<input type="email" placeholder="Email" name="email"id="email" v-model="email">
-
-											<input type="tel" placeholder="Téléphone" name="phone"
-												id="phone" v-model="phone">
-											<input type="text" placeholder="Nombre de kits"
-												name="number" id="number" v-model="nbr_kit">
-											<input type="text"
-												placeholder="Adresse de livraison (Ville/Quartier)"
-												name="subject" id="subject" v-model="adresse">
-
-											<input type="submit" value="Je valide ma commande"  @click.prevent="sendCommande1Data()">
-										</form>
-									</div>
-									<p class="text-center">Informations 100% confidentielles &
-										Sécurisées🔐
-									</p>
-								</div>
-
-							</div>
-						</div>
-					</div>
-
-				</div>
-
-			</div>
-			<div class="col-lg-6 col-md-6 col-sm-12 py-4 bloc-galery">
-				<div class="container description-produit py-4">
-					<h2><span class="orange-text">Prix  promo</span> pour ce mois <img src="assets/img/avaters/emo-joie.png" width="50px" alt="" srcset=""></h2>
-					<h5 class="orange-text">32.000 FCFA</h5>
-					<h4>Le NATUREL, votre puissante Tisane Africaine</h4>
-					<div class="text">
-						<p class="py-2">
-							Découvrez Le Naturel, la tisane africaine aux vertus extraordinaires,
-							également
-							connue sous le nom de "produit miracle". Avec sa formule puissante, Le Naturel
-							est votre allié dans le traitement efficace de plusieurs maladies, notamment :
-							<strong>Problèmes de prostate, Incontinence urinaire, Gouttes retardataires, Envies fréquentes d'uriner, Infections urinaires fréquentes,
-								Cancers du sein, VIH/SIDA, Diabète, Problèmes de glycémie, Problèmes de tension, Paralysies suite à un AVC, Prévention des AVC,
-								Brûlures des plantes des pieds, Kystes, fibromes, myomes, dystrophie ovarienne, IST MST, ménopause précoce, maladies des poumons,
-								hémorroïdes, constipation, 
-							</strong>
-							, <a class="link" href="shop.html">(Voir tous les cas traités par le
-								Naturel...)</a> <br>
-							Donnez à votre corps le traitement naturel dont il a besoin avec Le Naturel.
-							Essayez-le dès aujourd'hui pour une santé optimale et un bien-être durable.
-						</p>
-					</div>
-					<!--Countdown Timer-->
-					
-					<div class="bouton-position">
-					  <a href="cart.html" class="cart-btn mt-3 justify-content-center" data-toggle="modal"
-					  data-target="#exampleModalCenter">
-					     <i class="fas fa-shopping-cart"></i>
-						Commandez maintenant!
-					   </a>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="row py-5  my-slick-1">
-			<div class="col-md-4 mb-4">
-				<div class="card fa-card h-100"><img class="card-img-top w-100 h-50" src="assets/img/prostate_image.gif" alt="courses" />
-				  <div class="card-body">
-					<h3 class="tittre-cadre">Rêvez vous de guérir de la prostate</h3>
-					<h6>Ne vous inquitez plus la solution se trouve avec <strong>Le Naturel</strong></h6>
-					<h6 class="orange-text"> <a href="temoignage.html">Suivez des témoignages des personnes qui en souffraient de cette maladie.</a> </h6>
-					
-					
-				  </div>
-				</div>
-			</div>
-			<div class="col-md-4 mb-4">
-				<div class="card fa-card h-100"><img class="card-img-top w-100 h-50" src="assets/img/diabete_image.gif" alt="courses" />
-				  <div class="card-body">
-					<h3 class="tittre-cadre">Vous être fatigué du Diabète</h3>
-					<h6>Ne vous inquitez plus la solution se trouve avec <strong>Le Naturel</strong></h6>
-					<h6 class="orange-text"> <a href="temoignage.html">Suivez des témoignages des personnes qui en souffraient de cette maladie.</a> </h6>
-					
-			
-				  </div>
-				</div>
-			</div>
-			<div class="col-md-4 mb-4">
-				<div class="card fa-card h-100"><img class="card-img-top w-100 h-50" src="assets/img/concer_seins.gif" alt="courses" />
-				  <div class="card-body">
-					<h3 class="tittre-cadre">Le cancer de seins, plus d'espoir</h3>
-					<h6>Ne vous inquitez plus la solution se trouve avec <strong>Le Naturel</strong></h6>
-					<h6 class="orange-text"> <a href="temoignage.html">Suivez des témoignages des personnes qui en souffraient de cette maladie.</a> </h6>
-					
-					
-				  </div>
-				</div>
-			</div>
-			<div class="col-md-4 mb-4">
-				<div class="card fa-card h-100"><img class="card-img-top w-100 h-50" src="assets/img/hemoroide_image.gif" alt="image hemorroide" />
-				  <div class="card-body">
-					<h3 class="tittre-cadre">Vous en avez mare des hemorroides</h3>
-					<h6>Ne vous inquitez plus la solution se trouve avec <strong>Le Naturel</strong></h6>
-					<h6 class="orange-text"> <a href="temoignage.html">Suivez des témoignages des personnes qui en souffraient de cette maladie.</a> </h6>
-					
-					
-				  </div>
-				</div>
-			</div>
-			<div class="col-md-4 mb-4">
-				<div class="card fa-card h-100"><img class="card-img-top w-100 h-50" src="assets/img/ulcere_image.png"alt="image ulcère" />
-				  <div class="card-body">
-					<h3 class="tittre-cadre">L'ulcère, vous en souffrez de vivre avec.</h3>
-					<h6>Ne vous inquitez plus la solution se trouve avec <strong>Le Naturel</strong></h6>
-					<h6 class="orange-text"> <a href="temoignage.html">Suivez des témoignages des personnes qui en souffraient de cette maladie.</a> </h6>
-					
-				  </div>
-				</div>
-			</div>
-		</div>
-		<div class="lien-page">
-			<h4 class="clignote"><a href="shop.html">Cliquez ici pour voir tous les cas de maladies que "<strong>le Naturel</strong>" traite >>></a></h4>
 		</div>
 		
+	</div>
+	<!-- end hero area -->
+	<section id="maladie" >
+		<div class="container">
+
+			<div class="row py-5">
+				<div class="col-lg-6 col-md-6 col-sm-12 py-4 bloc-galery">
+					<input type="radio" id="image1" name="image" checked>
+					<input type="radio" id="image2" name="image">
+					<input type="radio" id="image3" name="image">
+
+					<div class="container-carousel">
+						<div class="featured-wrapper">
+							<ul class="featured-list">
+								<li>
+									<figure>
+										<img class="imgGalery" src="assets/img/products/image1.png" alt="">
+									</figure>
+								</li>
+								<li>
+									<figure>
+										<img class="imgGalery" src="assets/img/products/image2.png"
+											alt="">
+									</figure>
+								</li>
+								<li>
+									<figure>
+										<img class="imgGalery" src="assets/img/products/image3.png"
+											alt="">
+									</figure>
+								</li>
+							</ul>
+							<ul class="arrows">
+								<li>
+									<label for="image1"></label>
+								</li>
+								<li>
+									<label for="image2"></label>
+								</li>
+								<li>
+									<label for="image3"></label>
+								</li>
+							</ul>
+							<ul class="dots">
+								<li>
+									<label for="image1"></label>
+								</li>
+								<li>
+									<label for="image2"></label>
+								</li>
+								<li>
+									<label for="image3"></label>
+								</li>
+							</ul>
+						</div>
+						<ul class="thumb-list">
+							<li>
+								<label for="image1">
+									<img class="imgGalery" src="assets/img/products/image1.png" alt="">
+									<span class="outer">
+										<span class="inner">Caption1</span>
+									</span>
+								</label>
+							</li>
+							<li>
+								<label for="image2">
+									<img src="assets/img/products/image2.png" alt="">
+									<span class="outer">
+										<span class="inner">Caption2</span>
+									</span>
+								</label>
+							</li>
+							<li>
+								<label for="image3">
+									<img src="assets/img/products/image3.png" alt="">
+									<span class="outer">
+										<span class="inner">Caption3</span>
+									</span>
+								</label>
+							</li>
+						</ul>
+						<div class="bouton-position">
+							<a href="#" class="cart-btn mt-3 justify-content-center" data-toggle="modal"
+							data-target="#exampleModalCenter">
+							<i class="fas fa-shopping-cart"></i>
+								Commandez maintenant!
+							</a>
+						</div>
+
+						<!-- Modal -->
+						<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+							aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+							<div class="modal-dialog modal-dialog-centered" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h4 class="modal-title text-center" id="exampleModalLongTitle">
+											<strong>Entrez vos informations puis validez!!!</strong>
+											<br> 1 KIT à 32.000 FCFA</h4>
+										<button type="button" class="close" data-dismiss="modal"
+											aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body" id="commande">
+										<div class="contact-form" id="commande1">
+											<form type="POST">
+
+												<input type="text" placeholder="Nom & Prénoms" name="name&prenom" id="name&prenom" v-model="name">
+												<input type="email" placeholder="Email" name="email"id="email" v-model="email">
+
+												<input type="tel" placeholder="Téléphone" name="phone"
+													id="phone" v-model="phone">
+												<input type="text" placeholder="Nombre de kits"
+													name="number" id="number" v-model="nbr_kit">
+												<input type="text"
+													placeholder="Adresse de livraison (Ville/Quartier)"
+													name="subject" id="subject" v-model="adresse">
+
+												<input type="submit" value="Je valide ma commande"  @click.prevent="sendCommande1Data()">
+											</form>
+										</div>
+										<p class="text-center">Informations 100% confidentielles &
+											Sécurisées🔐
+										</p>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12 py-4 bloc-galery">
+					<div class="container description-produit py-4">
+						<h2><span class="orange-text">Prix  promo</span> pour ce mois <img src="assets/img/avaters/emo-joie.png" width="50px" alt="" srcset=""></h2>
+						<h5 class="orange-text">32.000 FCFA</h5>
+						<h4>Le NATUREL, votre puissante Tisane Africaine</h4>
+						<div class="text">
+							<p class="py-2">
+								Découvrez Le Naturel, la tisane africaine aux vertus extraordinaires,
+								également
+								connue sous le nom de "produit miracle". Avec sa formule puissante, Le Naturel
+								est votre allié dans le traitement efficace de plusieurs maladies, notamment :
+								<strong>Problèmes de prostate, Incontinence urinaire, Gouttes retardataires, Envies fréquentes d'uriner, Infections urinaires fréquentes,
+									Cancers du sein, VIH/SIDA, Diabète, Problèmes de glycémie, Problèmes de tension, Paralysies suite à un AVC, Prévention des AVC,
+									Brûlures des plantes des pieds, Kystes, fibromes, myomes, dystrophie ovarienne, IST MST, ménopause précoce, maladies des poumons,
+									hémorroïdes, constipation, 
+								</strong>
+								, <a class="link" href="shop.html">(Voir tous les cas traités par le
+									Naturel...)</a> <br>
+								Donnez à votre corps le traitement naturel dont il a besoin avec Le Naturel.
+								Essayez-le dès aujourd'hui pour une santé optimale et un bien-être durable.
+							</p>
+						</div>
+						<!--Countdown Timer-->
+						
+						<div class="bouton-position">
+						<a href="cart.html" class="cart-btn mt-3 justify-content-center" data-toggle="modal"
+						data-target="#exampleModalCenter">
+							<i class="fas fa-shopping-cart"></i>
+							Commandez maintenant!
+						</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row py-5  my-slick-1">
+				<div class="col-md-4 mb-4">
+					<div class="card fa-card h-100"><img class="card-img-top w-100 h-50" src="assets/img/prostate_image.gif" alt="courses" />
+					<div class="card-body">
+						<h3 class="tittre-cadre">Rêvez vous de guérir de la prostate</h3>
+						<h6>Ne vous inquitez plus la solution se trouve avec <strong>Le Naturel</strong></h6>
+						<h6 class="orange-text"> <a href="temoignage.html">Suivez des témoignages des personnes qui en souffraient de cette maladie.</a> </h6>
+						
+						
+					</div>
+					</div>
+				</div>
+				<div class="col-md-4 mb-4">
+					<div class="card fa-card h-100"><img class="card-img-top w-100 h-50" src="assets/img/diabete_image.gif" alt="courses" />
+					<div class="card-body">
+						<h3 class="tittre-cadre">Vous être fatigué du Diabète</h3>
+						<h6>Ne vous inquitez plus la solution se trouve avec <strong>Le Naturel</strong></h6>
+						<h6 class="orange-text"> <a href="temoignage.html">Suivez des témoignages des personnes qui en souffraient de cette maladie.</a> </h6>
+						
+				
+					</div>
+					</div>
+				</div>
+				<div class="col-md-4 mb-4">
+					<div class="card fa-card h-100"><img class="card-img-top w-100 h-50" src="assets/img/concer_seins.gif" alt="courses" />
+					<div class="card-body">
+						<h3 class="tittre-cadre">Le cancer de seins, plus d'espoir</h3>
+						<h6>Ne vous inquitez plus la solution se trouve avec <strong>Le Naturel</strong></h6>
+						<h6 class="orange-text"> <a href="temoignage.html">Suivez des témoignages des personnes qui en souffraient de cette maladie.</a> </h6>
+						
+						
+					</div>
+					</div>
+				</div>
+				<div class="col-md-4 mb-4">
+					<div class="card fa-card h-100"><img class="card-img-top w-100 h-50" src="assets/img/hemoroide_image.gif" alt="image hemorroide" />
+					<div class="card-body">
+						<h3 class="tittre-cadre">Vous en avez mare des hemorroides</h3>
+						<h6>Ne vous inquitez plus la solution se trouve avec <strong>Le Naturel</strong></h6>
+						<h6 class="orange-text"> <a href="temoignage.html">Suivez des témoignages des personnes qui en souffraient de cette maladie.</a> </h6>
+						
+						
+					</div>
+					</div>
+				</div>
+				<div class="col-md-4 mb-4">
+					<div class="card fa-card h-100"><img class="card-img-top w-100 h-50" src="assets/img/ulcere_image.png"alt="image ulcère" />
+					<div class="card-body">
+						<h3 class="tittre-cadre">L'ulcère, vous en souffrez de vivre avec.</h3>
+						<h6>Ne vous inquitez plus la solution se trouve avec <strong>Le Naturel</strong></h6>
+						<h6 class="orange-text"> <a href="temoignage.html">Suivez des témoignages des personnes qui en souffraient de cette maladie.</a> </h6>
+						
+					</div>
+					</div>
+				</div>
+			</div>
+			<div class="lien-page">
+				<h4 class="clignote"><a href="shop.html">Cliquez ici pour voir tous les cas de maladies que "<strong>le Naturel</strong>" traite >>></a></h4>
+			</div>
+			
 		</div>
+	</section>
 		
 	<section class="bloc-galery" >	
 			

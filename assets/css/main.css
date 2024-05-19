@@ -2124,6 +2124,11 @@ input[type=radio] {
   background-color: #f5f5f5;
 }
 
+.texte-ombre {
+  color: #f5f5f5;
+  text-shadow: 4px 4px 15px rgb(68, 255, 92);
+}
+
 .video {
   background-color: rgb(214, 216, 217);
   padding-top: 10px;

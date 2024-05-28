@@ -2129,6 +2129,24 @@ input[type=radio] {
   text-shadow: 4px 4px 15px rgb(68, 255, 92);
 }
 
+.title {
+  background: -webkit-linear-gradient(#349202, #ccff02, #194203);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  color: var(--white);
+}
+
+.present {
+  color: var(--white);
+}
+
+.naturel {
+  color: #8ec63d;
+}
+
 .video {
   background-color: rgb(214, 216, 217);
   padding-top: 10px;
